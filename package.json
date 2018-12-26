@@ -11,14 +11,13 @@
     "server": "nodemon ./server/index.js --exec babel-node",
     "prod:buildserver": "rm -rf ./server/server-dist && babel ./server -d ./server/server-dist --copy-files",
     "client": "npm run start --prefix client",
+    "getAll": "npm i && cd client/ && npm i && ..",
     "dev": "concurrently --raw --kill-others \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aniscrape": "^0.1.1",
-    "aniscrape-animebam-https": "^0.1.4",
     "babel-preset-react": "6.24.1",
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.0",
@@ -28,8 +27,7 @@
     "mongoose": "^4.11.12",
     "nodemon": "^1.12.1",
     "passport": "^0.4.0",
-    "passport-google-oauth20": "^1.0.0",
-    "x-ray": "^2.3.3"
+    "passport-google-oauth20": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
